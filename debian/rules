@@ -1,0 +1,58 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+p	= virtaal
+d	= debian/$(p)
+pv	= $(shell python -c 'import sys; print sys.version[:3]')
+
+include /usr/share/quilt/quilt.make
+
+build: build-stamp
+build-stamp: $(QUILT_STAMPFN)
+	dh_testdir
+	python setup.py build
+	touch build-stamp
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -rf build
+	rm -f MANIFEST.in
+	-find -name '*.py[co]' | xargs rm -f
+	rm -f mo/*/virtaal.mo
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	python setup.py install --nodepcheck --prefix=`pwd`/$(d)/usr
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installman
+	dh_installmenu
+	dh_installmime
+	dh_icons
+	dh_compress
+	dh_fixperms
+	dh_python2
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+# Build architecture-dependent files here.
+binary-arch: build install
+# We have nothing to do by default.
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure
