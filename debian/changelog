@@ -1,0 +1,162 @@
+virtaal (0.6.99+0.7beta3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/control: update to dh_python2, dropping python-cental
+  * debian/rules: update to dh_python2
+  * debian/control: Bump translate-toolkit to 1.9.0
+
+ -- Omar Campagne <ocampagne@gmail.com>  Wed, 20 Apr 2011 10:29:53 +0200
+
+virtaal (0.6.1-0.1) unstable; urgency=low
+
+  * Non-maintainer upload with maitnainer's agreement.
+  * New upstream version. Closes: #585005
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 30 Jul 2010 03:41:19 +0200
+
+virtaal (0.5.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Bump version dependency of translate-toolkit to 1.5.1.
+  * debian/control: Standards-Version bumped to 3.8.4. No changes.
+  * debian/control: Add dependency on ${misc:Depends}
+  * debian/control: Remove build dependency on python-all-dev.
+  * debian/copyright: Updated
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Tue, 02 Feb 2010 00:22:04 +0100
+
+virtaal (0.5.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Added python-psycopg2 to the Recommended package. This is
+    needed for the TinyTM plugin.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Mon, 11 Jan 2010 19:40:47 +0100
+
+virtaal (0.5.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sun, 06 Dec 2009 12:51:22 +0100
+
+virtaal (0.5.0~rc1-1) UNRELEASED; urgency=low
+
+  * New upstream release
+  * debian/control: This version of virtaal will depend on
+    translate-toolkit >= 1.5.0
+  * debian/patches/debian_openoffice_autocorr_files,
+    debian/patches/fail_for_missing_dependencies: Refreshed patches.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sat, 21 Nov 2009 14:53:56 +0100
+
+virtaal (0.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version bumped to 3.8.3. No changes.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sun, 08 Nov 2009 23:17:08 +0100
+
+virtaal (0.4.0-2) unstable; urgency=low
+
+  * debian/control: Recommend python-gtkspell instead of python-gnome2-extras.
+    Closes: #541599
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sat, 15 Aug 2009 02:38:22 +0200
+
+virtaal (0.4.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Mon, 10 Aug 2009 21:16:09 +0200
+
+virtaal (0.4.0~rc2-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: move from section python to section devel.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Mon, 03 Aug 2009 00:10:47 +0200
+
+virtaal (0.4.0~rc1-1) experimental; urgency=low
+
+  * New upstream release
+    + debian/patches/glade_warnings: Removed (not needed anymore).
+  * debian/control: Standards-Version bumped to 3.8.2. No changes.
+  * debian/rules: Removed dh_desktop, this is now handled with a trigger.
+  * debian/rules: Do not check the dependencies at build time. This avoid
+    depending on too many python libraries at build time (--nodepcheck added)
+  * debian/rules: Remove the generated (binary) MO files in the clean rule to
+    allow building twice in a row
+  * debian/patches/debian_remove_tests: Do not distribute the test directory.
+  * debian/patches/fail_for_missing_dependencies: Fail when the dependencies
+    are checked (and some dependencies are missing) during build time, instead
+    of just issuing a warning.
+  * debian/control: Added dependency: python-simplejson.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sat, 25 Jul 2009 13:59:33 +0200
+
+virtaal (0.3.1-3) unstable; urgency=low
+
+  * debian/watch: Added watch file.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sun, 01 Mar 2009 11:23:38 +0100
+
+virtaal (0.3.1-2) unstable; urgency=low
+
+  * debian/control: Added dependency on python-lxml. It is required for
+    Virtaal, but only recommended by translate-toolkit. Closes: #517522 
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sat, 28 Feb 2009 13:31:05 +0100
+
+virtaal (0.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control, debian/virtaal.1: Fix Virtaal's name.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Wed, 18 Feb 2009 19:04:39 +0100
+
+virtaal (0.3.0-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Added missing build dependency on translate-toolkit.
+    Closes: #507267
+  * debian/control: Recommend python-levenshtein to avoid warnings.
+    Closes: #507207
+  * debian/control: Added missing dependency on python-glade2.
+    Closes: #507206
+  * debian/control: Added dependency on python-pycurl.
+  * debian/rules: build-stamp depends on $(QUILT_STAMPFN) instead of patch.
+    This avoid building twice.
+  * trunk/debian/patches/debian_openoffice_autocorr_files: Updated.
+  * debian/patches/glade_warnings: Added patch to avoid glade warnings.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Tue, 10 Feb 2009 22:16:59 +0100
+
+virtaal (0.2-1) unstable; urgency=low
+
+  * New upstream release. Closes: #500954
+  * debian/virtaal.1: Added manpage.
+  * debian/control: Updated translate-toolkit dependency.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sun, 19 Oct 2008 15:28:08 +0200
+
+virtaal (0.2~rc1-2) experimental; urgency=low
+
+  * Initial Debian release. Closes: #500954
+  * debian/control: Add a versioned dependency on the translate-toolkit
+    (>= 1.2.0~rc1)
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Fri, 03 Oct 2008 21:51:07 +0200
+
+virtaal (0.2~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control: Standards-Version bumped to 3.8.0.
+  * debian/control: Updated Homepage (point to the wiki page for Virtaal).
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Thu, 02 Oct 2008 17:44:53 +0200
+
+virtaal (0.1-1) UNRELEASED; urgency=low
+
+  * Initial Release.
+
+ -- Nicolas FRANCOIS (Nekral) <nicolas.francois@centraliens.net>  Sat, 10 May 2008 14:19:35 +0200
