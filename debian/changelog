@@ -1,11 +1,17 @@
 virtaal (0.6.99+0.7beta3) unstable; urgency=low
 
   * Non-maintainer upload.
-  * debian/control: update to dh_python2, dropping python-cental
-  * debian/rules: update to dh_python2
   * debian/control: Bump translate-toolkit to 1.9.0
+  * debian/control: Update to dh_python2, dropping python-cental
+  * debian/rules: Update to dh_python2
   * debian/patches: Refresh fail_for_missing_dependencies
   * debian/patches: Added disable_profiling
+  * debian/virtaal.1: Changing python-gnome2-extras recommendation
+    for spelling function to python-gtkspell
+  * debian/virtaal.1: Delete profiling info in manpage 
+  * debian/virtaal.1: Delete --terminology option from manpage, nonexistent
+  * debian/virtaal.1: Change/correct shortcuts info, add link to shortcuts'
+    webpage
 
  -- Omar Campagne <ocampagne@gmail.com>  Wed, 20 Apr 2011 10:29:53 +0200
 
