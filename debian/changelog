@@ -4,6 +4,8 @@ virtaal (0.6.99+0.7beta3) unstable; urgency=low
   * debian/control: update to dh_python2, dropping python-cental
   * debian/rules: update to dh_python2
   * debian/control: Bump translate-toolkit to 1.9.0
+  * debian/patches: Refresh fail_for_missing_dependencies
+  * debian/patches: Added disable_profiling
 
  -- Omar Campagne <ocampagne@gmail.com>  Wed, 20 Apr 2011 10:29:53 +0200
 
