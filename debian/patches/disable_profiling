@@ -1,0 +1,13 @@
+Index: virtaal-debian/bin/virtaal
+===================================================================
+--- virtaal-debian.orig/bin/virtaal	2011-04-20 10:55:13.000000000 +0200
++++ virtaal-debian/bin/virtaal	2011-04-20 10:55:23.000000000 +0200
+@@ -97,7 +97,7 @@
+                         help=_("enable debugging features")),
+         ]
+         # Profiling does not make sense in packaged versions.  Set to True to disable profiling.
+-        packaged = False
++        packaged = True
+         if not packaged:
+             option_list.insert(0, make_option("-P", "--profile", action="store",
+                                               type="string", dest="profile",

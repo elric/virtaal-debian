@@ -1,0 +1,5 @@
+disable_profiling
+debian_xpm_menu_icon
+debian_openoffice_autocorr_files
+fail_for_missing_dependencies
+debian_remove_tests
