@@ -1,3 +1,14 @@
+Author: Omar Campagne <ocampagne@gmail.com>
+Subject: Disable profiling in packages.
+Description: Profiling does not work with packaged versions.
+.
+The developers offer an easy way to disable its appereance from --help by editing bin/virtaal
+
+* bin/virtaal
+
+Bug: http://bugs.locamotion.org/show_bug.cgi?id=1861 
+Forwarded: not-needed
+
 Index: virtaal-debian/bin/virtaal
 ===================================================================
 --- virtaal-debian.orig/bin/virtaal	2011-04-20 10:55:13.000000000 +0200
