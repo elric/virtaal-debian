@@ -1,0 +1,33 @@
+Goal: Use the OpenOffice.org autocorrection files, instead of the ones
+      distributed by virtaal.
+
+--- a/setup.py
++++ b/setup.py
+@@ -82,7 +82,6 @@
+ options = {
+     'data_files': [
+         (path.join(TARGET_DATA_DIR, "virtaal"), glob(path.join(SOURCE_DATA_DIR, "virtaal", "*.*"))),
+-        (path.join(TARGET_DATA_DIR, "virtaal", "autocorr"), glob(path.join(SOURCE_DATA_DIR, "virtaal", "autocorr", "*"))),
+         (path.join(TARGET_DATA_DIR, "icons"), glob(path.join(SOURCE_DATA_DIR, "icons", "*.*"))),
+     ] + mo_files,
+     'scripts': [
+@@ -135,7 +134,7 @@
+     ['LICENSE', 'maketranslations', path.join('devsupport', 'virtaal_innosetup.bmp')]
+ ]
+ 
+-no_install_dirs = ['po']
++no_install_dirs = ['po', 'share/virtaal/autocorr']
+ 
+ #############################
+ # WIN 32 specifics
+--- a/virtaal/plugins/autocorrector.py
++++ b/virtaal/plugins/autocorrector.py
+@@ -270,7 +270,7 @@
+         self._init_plugin()
+ 
+     def _init_plugin(self):
+-        self.autocorr = AutoCorrector(self.main_controller, acorpath=pan_app.get_abs_data_filename(['virtaal', 'autocorr']))
++        self.autocorr = AutoCorrector(self.main_controller, acorpath="/usr/lib/openoffice/share/autocorr")
+ 
+         def on_cursor_change(cursor):
+             def add_widgets():

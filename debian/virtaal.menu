@@ -1,0 +1,6 @@
+?package(virtaal):\
+	needs="x11"\
+	section="Applications/Programming"\
+	title="Virtaal"\
+	icon="/usr/share/icons/virtaal.xpm"\
+	command="/usr/bin/virtaal"

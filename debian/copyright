@@ -1,0 +1,28 @@
+This package was debianized by Nicolas FRANCOIS (Nekral)
+<nicolas.francois@centraliens.net> on Sat, 10 May 2008 14:19:35 +0200
+
+It was downloaded from
+http://translate.sourceforge.net/releases/virtaal-0.1/
+
+Copyright:
+	Copyright (C) 2007-2009 Zuza Software Foundation
+
+	virtaal/unit_renderer.py is also:
+	Copyright (C) 2005-2007 Osmo Salomaa
+
+	virtaal/support/libi18n/locale.py is also
+	Copyright (C) 2007-2008 Dieter Verfaillie <dieterv@optionexplicit.be>
+
+Upstream Authors:
+
+	Zuza Software Foundation (Translate.org.za)
+
+License:
+
+	Released under the GPL license version 2 or later.
+
+GPL:
+----
+
+On Debian GNU/Linux systems, the complete text of this GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-2'.

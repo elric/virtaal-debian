@@ -1,0 +1,10 @@
+--- a/setup.py
++++ b/setup.py
+@@ -103,7 +103,6 @@
+         "virtaal.plugins.tm.models",
+         "virtaal.support",
+         "virtaal.support.libi18n",
+-        "virtaal.test",
+         "virtaal.views",
+         "virtaal.views.widgets"
+     ],
