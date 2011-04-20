@@ -1,0 +1,70 @@
+.TH VIRTAAL 1
+.SH NAME
+virtaal \- Graphical translation editor
+
+.SH SYNOPSIS
+
+.B virtaal
+.RI [ options ]
+.RI [ translation_file ]
+
+.SH DESCRIPTION
+
+.B Virtaal
+is a Graphical translation editor.
+It uses the Translate Toolkit to get access to translation files and
+therefore can edit a variety of files (including PO and XLIFF files).
+
+Automatic completion, spellchecking and correction can be provided by
+installing the
+.B python-gtkspell
+and
+.B openoffice.org-common
+packages.
+
+.SH OPTIONS
+
+.TP
+\fB\-\-profile\fR=\fIPROFILE\fR
+Perform profiling, storing the result to the supplied filename.
+.TP
+\fB\-\-log\fR=\fILOG\fR
+Turn on logging, storing the result to the supplied filename.
+.TP
+\fB\-\-config\fR=\fICONFIG\fR
+Use the configuration file given by the supplied filename.
+.TP
+\fB\-\-terminology\fR=\fITERMINOLOGY\fR
+Specify a directory containing terminology files
+.TP
+.B \-\-version
+show program's version number and exit
+.TP
+.BR \-h ", " \-\-help            
+show this help message and exit
+
+.SH "SHORTCUTS"
+
+.TP
+.B <Enter>
+Continue with the next message.
+(A new line will be inserted automatically after typing \\n)
+.TP
+.B <Alt+Down>.
+Copy the original string into the target field.
+.TP
+.B <Alt+U>
+Mark the current translation as fuzzy.
+.TP
+.B <Ctrl+Up>
+.TP
+.B <Ctrl+Down>
+Move between translations.
+.TP
+.B <Ctrl+PgUp>
+.TP
+.B <Ctrl+PgDown>
+Move in large steps between translations.
+
+.SH "SEE ALSO"
+http://translate.sourceforge.net/wiki/virtaal/index
